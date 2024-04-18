@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "target": "es5",
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "target": "ES5",
     "typeRoots": [
       "./node_modules/@types",
       "./public/types",
@@ -22,11 +22,17 @@
       "dom.iterable",
       "scripthost"
     ],
-    "charset": "utf8",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "~/*": [
+        "./*"
+      ]
+    },
     "baseUrl": ".",
     "outDir": "./dist/",
     "jsx": "preserve",
-    "importsNotUsedAsValues": "preserve",
     "declaration": true,
     "esModuleInterop": true,
     "downlevelIteration": true,
@@ -42,20 +48,19 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "forceConsistentCasingInFileNames": true,
-    "suppressImplicitAnyIndexErrors": true
+    "verbatimModuleSyntax": false
   },
   "include": [
-    "public/types/**/*",
+    "public/**/*.d.ts",
     "types/**/*",
     "src/**/*"
   ],
   "exclude": [
+    ".idea",
+    ".scannerwork",
+    ".vscode",
     "coverage",
     "dist",
-    "src/assets",
-    ".idea",
-    ".git",
-    ".scannerwork",
-    ".vscode"
+    "src/assets"
   ]
 }
