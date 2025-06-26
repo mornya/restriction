@@ -1,6 +1,6 @@
 {
   "name": "restriction",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "The restriction of term.",
   "keywords": [
     "restriction",
@@ -24,7 +24,7 @@
   "types": "./dist",
   "scripts": {
     "setup": "husky && lintest install || exit 0",
-    "prepublishOnly": "vessel prepublish && vessel build",
+    "prepublishOnly": "vessel prepublish && vessel build && vessel build --esm",
     "login": "vessel login",
     "clean": "vessel clean",
     "build": "vessel build",
@@ -66,17 +66,17 @@
     "npm": ">=6"
   },
   "devDependencies": {
-    "@lintest/core": "^1.16.0",
-    "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.7",
-    "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.25",
-    "@types/webpack-env": "^1.18.4",
-    "eslint": "^8.57.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "prettier": "^3.2.5",
-    "typescript": "^5.4.5"
+    "@lintest/core": "^1.17.0",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^24.0.10",
+    "@types/react": "^18.3.23",
+    "@types/react-dom": "^18.3.7",
+    "@types/webpack-env": "^1.18.8",
+    "eslint": "^8.57.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "typescript": "^5.8.3"
   },
   "lint-staged": {
     "*.{css,scss}": [
@@ -89,6 +89,6 @@
     ]
   },
   "vessel": {
-    "minVersion": "5.3.0"
+    "minVersion": "5.6.0"
   }
 }
